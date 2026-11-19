@@ -22,6 +22,7 @@ services:
     container_name: registration-web
     restart: unless-stopped
     environment:
+      FLASK_HOST: "0.0.0.0"
       SECRET_KEY: ${SECRET_KEY:-replace-this-in-production}
       DB_HOST: db
       DB_PORT: 3306

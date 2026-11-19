@@ -134,4 +134,5 @@ if __name__ == "__main__":
     except Error as exc:
         app.logger.error("Database initialization failed: %s", exc)
         raise
-    app.run(host="0.0.0.0", port=5000)
+    host = os.getenv("FLASK_HOST", "0.0.0.0")
+    app.run(host=host, port=5000)
