@@ -135,4 +135,4 @@ if __name__ == "__main__":
         app.logger.error("Database initialization failed: %s", exc)
         raise
     host = os.getenv("FLASK_HOST", "127.0.0.1")
-app.run(host=host, port=5000)
+    app.run(host=host, port=5000)
