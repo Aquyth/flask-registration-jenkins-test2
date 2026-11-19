@@ -23,7 +23,11 @@ pipeline {
 
         stage('Unit Tests') {
             steps {
-                sh '. .venv/bin/activate && pytest -v'
+                sh '''
+                . .venv/bin/activate
+                export PYTHONPATH=$WORKSPACE
+                pytest -v
+                '''
             }
         }
 
